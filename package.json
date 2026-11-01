@@ -1,0 +1,29 @@
+{
+  "name": "itsariadust.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "start": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsariadust/itsariadust.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsariadust/itsariadust.github.io/issues"
+  },
+  "homepage": "https://github.com/itsariadust/itsariadust.github.io#readme",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  }
+}
