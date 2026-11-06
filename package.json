@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
-    "start": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve"
+    "start": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve",
+    "build-ghpages": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itsariadust/itsariadust.github.io.git",
-    "build-ghpages": "npx @11ty/eleventy"
+    "url": "git+https://github.com/itsariadust/itsariadust.github.io.git"
   },
   "keywords": [],
   "author": "",
