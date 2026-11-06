@@ -9,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itsariadust/itsariadust.github.io.git"
+    "url": "git+https://github.com/itsariadust/itsariadust.github.io.git",
+    "build-ghpages": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
