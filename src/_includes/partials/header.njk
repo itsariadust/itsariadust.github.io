@@ -1,5 +1,5 @@
 <header>
-  <h1>
+  <h1 class="title">
     <a href="/">{{ site.title }}</a>
   </h1>
 
@@ -7,6 +7,40 @@
     <a href="/projects/" class="nav-link">projects</a>
     <a href="/blog/" class="nav-link">blog</a>
     <a href="/about/" class="nav-link">about</a>
-    <a href="#" class="nav-link">toggle theme</a>
+    <details class="theme-menu">
+      <summary class="nav-link">theme</summary>
+      <div class="theme-options" aria-label="Themes">
+        <button type="button" data-theme="everforest-dark">everforest-dark</button>
+        <button type="button" data-theme="nord-dark">nord-dark</button>
+      </div>
+    </details>
   </nav>
 </header>
+
+<script>
+  (() => {
+    const menu = document.querySelector('.theme-menu');
+    const themes = [...menu.querySelectorAll('[data-theme]')];
+    const availableThemes = themes.map((option) => option.dataset.theme);
+    const savedTheme = localStorage.getItem('theme');
+    const activeTheme = availableThemes.includes(savedTheme) ? savedTheme : 'everforest-dark';
+
+    const applyTheme = (theme) => {
+      document.body.classList.remove(...availableThemes);
+      document.body.classList.add(theme);
+      themes.forEach((option) => {
+        option.setAttribute('aria-pressed', String(option.dataset.theme === theme));
+      });
+    };
+
+    applyTheme(activeTheme);
+
+    themes.forEach((option) => {
+      option.addEventListener('click', () => {
+        applyTheme(option.dataset.theme);
+        localStorage.setItem('theme', option.dataset.theme);
+        menu.removeAttribute('open');
+      });
+    });
+  })();
+</script>

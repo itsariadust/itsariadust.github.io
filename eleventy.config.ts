@@ -1,4 +1,6 @@
 import type { UserConfig } from "@11ty/eleventy";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs"
 
 export default function (eleventyConfig: UserConfig) {
   // Keep support for TypeScript templates when needed.
@@ -13,6 +15,14 @@ export default function (eleventyConfig: UserConfig) {
   eleventyConfig.addFilter("readableDate", (date: Date) => {
     return new Intl.DateTimeFormat().format(date);
   });
+
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let markdownLib = markdownIt(options).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", markdownLib);
 
   return {
     dir: {

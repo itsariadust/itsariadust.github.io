@@ -1,0 +1,47 @@
+:root .nord-dark {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --color-background-dim: #2e3440;
+  --color-background: #2e3440;
+  --color-surface-1: #3b4252;
+  --color-surface-2: #434c5e;
+  --color-surface-3: #4c566a;
+  --color-surface-4: #4c566a;
+  --color-surface-5: #4c566a;
+
+  /* Text and borders */
+  --color-text: #eceff4;
+  --color-text-subtle: #e5e9f0;
+  --color-text-muted: #d8dee9;
+  --color-text-disabled: #4c566a;
+  --color-border: #4c566a;
+  --color-border-subtle: #3b4252;
+
+  /* Interactive elements */
+  --color-primary: #88c0d0;
+  --color-primary-hover: #8fbcbb;
+  --color-primary-contrast: #2e3440;
+  --color-focus: #81a1c1;
+  --color-selection: #434c5e;
+
+  /* Accents */
+  --color-accent-red: #bf616a;
+  --color-accent-orange: #d08770;
+  --color-accent-yellow: #ebcb8b;
+  --color-accent-green: #a3be8c;
+  --color-accent-aqua: #8fbcbb;
+  --color-accent-blue: #81a1c1;
+  --color-accent-purple: #b48ead;
+
+  /* Feedback */
+  --color-danger: #bf616a;
+  --color-danger-background: #3b4252;
+  --color-warning: #ebcb8b;
+  --color-warning-background: #3b4252;
+  --color-success: #a3be8c;
+  --color-success-background: #3b4252;
+  --color-info: #81a1c1;
+  --color-info-background: #3b4252;
+  --color-highlight-background: #434c5e;
+}

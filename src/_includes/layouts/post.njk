@@ -6,7 +6,8 @@ layout: layouts/base.njk
   <header>
     <h1>{{ title }}</h1>
   </header>
-
+  <p class="subtitle">Published on: {{ date | readableDate }}</p>
+  <p class="subtitle">Updated on: {{ updated | readableDate }}</p>
   <div class="prose">
     {{ content | safe }}
   </div>

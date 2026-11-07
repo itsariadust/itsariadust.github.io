@@ -1,0 +1,47 @@
+:root .everforest-dark {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --color-background-dim: #1e2326;
+  --color-background: #272e33;
+  --color-surface-1: #2e383c;
+  --color-surface-2: #374145;
+  --color-surface-3: #414b50;
+  --color-surface-4: #495156;
+  --color-surface-5: #4f5b58;
+
+  /* Text and borders */
+  --color-text: #d3c6aa;
+  --color-text-subtle: #9da9a0;
+  --color-text-muted: #859289;
+  --color-text-disabled: #7a8478;
+  --color-border: #859289;
+  --color-border-subtle: #495156;
+
+  /* Interactive elements */
+  --color-primary: #a7c080;
+  --color-primary-hover: #83c092;
+  --color-primary-contrast: #1e2326;
+  --color-focus: #7fbbb3;
+  --color-selection: #4c3743;
+
+  /* Accents */
+  --color-accent-red: #e67e80;
+  --color-accent-orange: #e69875;
+  --color-accent-yellow: #dbbc7f;
+  --color-accent-green: #a7c080;
+  --color-accent-aqua: #83c092;
+  --color-accent-blue: #7fbbb3;
+  --color-accent-purple: #d699b6;
+
+  /* Feedback */
+  --color-danger: #e67e80;
+  --color-danger-background: #493b40;
+  --color-warning: #dbbc7f;
+  --color-warning-background: #45443c;
+  --color-success: #a7c080;
+  --color-success-background: #3c4841;
+  --color-info: #7fbbb3;
+  --color-info-background: #384b55;
+  --color-highlight-background: #463f48;
+}
