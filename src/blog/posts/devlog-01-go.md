@@ -28,7 +28,7 @@ So I decided to build something on my own. The question now becomes: what should
 
 I don't know anything about native coding, not to mention the pains of trying to make it cross-platform. I'm pretty much forced to use either C or C++ for this, which I really don't have the time. Checking out the repos of ikachan's author on GitLab, the program is highly likely to be a C program. Sure I can use Qt for the interface and then just vibe-code C++ but I feel like I won't learn anything from that at all. I might talk about how vibe coding sapped out my energy in a future post. Also, I don't like C++'s complex syntax and it actually makes my head spin trying to comprehend it.
 
-## The crossplatform path (no Electron)
+## The crossplatform path (no Electron) { .post-h2 }
 
 So this leaves me with going cross-platform. The problem is that it's often ending up making an [Electron](https://www.electronjs.org/) application. The problem with Electron is the Chromium bundle included in the program, which makes it too heavy to begin with. While the program that I want to build is somewhat simple, I'd like to at least be able to still multitask in this old ass laptop. Electron is simply not for this kind of usecase. I think there should be an alternative to Electron but I haven't seen it. I might have to research a bit more, but I'm pretty much set on rejecting Electron.
 
@@ -48,13 +48,13 @@ Since I forgo using Rust and therefore the booru-rs library, this pretty much me
 
 In somewhat of a funny twist, I had to learn a little bit of Rust to understand how booru-rs is written. I mostly looked at how things are structured. I think it's always good to read code when trying to learn how to build something or even trying to learn a new language. Seeing that codebase made me think that perhaps learning Rust might not be that bad after all, but I don't feel like doing a 180 turn and do this project in Rust. I have decided to write it in Go and it shall be written in Go.
 
-## Building it small, for now
+## Building it small, for now { .post-h2 }
 
 I built the library in the smallest way possible. There's only three features: search, autocomplete, and download. Search is what it says on the tin. Since Gelbooru has no tag limits, a string of tags can be used. There's also ways to limit the amount of items too. There's still no pagination yet but I will have to implement to allow for infinite scrolling in the application. Autocomplete is there so that we can get an array of tags to complete a search query. Download is just a rather a hacky solution to downloading a collection of posts and using goroutines and channels to create a concurrent workload across 5 workers. It essentially uses a worker pool and the channel pushes array contents into those workers.
 
 It does work, but I do need to do some polishing, especially in trying to code this by following some programming standards for the language, and getting out of the object-oriented gutter as much as possible so reducing builder patterns, aside from search which is arguably more useful because you're building a search query to begin with. Downloads do need more work to make it as stable as possible, implement some dupe checking, checksum checking, and many more. I could make some of those features optional too since it's a libary and I really shouldn't force developers to do one thing only for something as configurable as the downloader.
 
-## Finishing it off
+## Finishing it off { .post-h2 }
 
 Overall, I think this project might actually revive my interest in programming in general. Making webslop is draining my desire to code and I think this one should at least heal it. Yeah the frontend is still using web technologies but I think the important part of this is how I'm trying to build out an interesting backend for this application. Maybe I'll ditch [React](https://react.dev/) for the frontend and use something simple, perhaps [Svelte](https://svelte.dev/). I have yet to make the frontend since I want the library to at least be functional and properly structured first before trying to work on the frontend. But I'm positive that I could probably release a preview version by next month, if not next year on January.
 
